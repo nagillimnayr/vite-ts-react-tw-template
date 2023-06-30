@@ -1,22 +1,29 @@
 /** @format */
 
 module.exports = {
-	extends: [
-		'eslint:recommended',
-		'plugin:import/recommended',
-		'eslint-config-airbnb-base',
-		'prettier',
-	],
-	settings: {
-		'import/resolver': {
-			node: {
-				paths: ['src'],
-				extensions: ['.js', '.jsx', '.ts', '.tsx'],
-			},
-		},
-	},
-	env: {
-		browser: true,
-		node: true,
-	},
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/recommended',
+        'eslint-config-airbnb',
+        'eslint-config-airbnb-typescript',
+        'prettier',
+    ],
+    settings: {
+        'import/resolver': {
+            node: {
+                paths: ['src'],
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            },
+        },
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: './tsconfig.json',
+    },
+    plugins: ['@typescript-eslint'],
+    env: {
+        browser: true,
+        node: true,
+    },
 };
