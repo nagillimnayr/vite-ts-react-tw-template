@@ -5,8 +5,6 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:import/recommended',
-        'eslint-config-airbnb',
-        'eslint-config-airbnb-typescript',
         'prettier',
     ],
     settings: {
